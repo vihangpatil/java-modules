@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.vihangpatil.java9app</groupId>
+  <artifactId>java9app</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.vihangpatil</groupId>
+    <artifactId>java-modules</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <name>java9app</name>
+
+  <properties>
+    <maven.compiler.source>9</maven.compiler.source>
+    <maven.compiler.target>9</maven.compiler.target>
+  </properties>
+
+  <modules>
+    <module>com.vihangpatil.java9app.api</module>
+    <module>com.vihangpatil.java9app.impl</module>
+    <module>com.vihangpatil.java9app.main</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <scource>1.9</scource>
+          <target>1.9</target>
+          <jdkToolchain>
+            <version>9</version>
+          </jdkToolchain>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
