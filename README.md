@@ -43,8 +43,28 @@ constructors or Abstract Factories.
 
     mvn clean package
 
+## Maven Toolchain settings
+
+Add this in `~/.m2/toolchains.xml`
+
+    <?xml version="1.0"?>
+    <toolchains>
+      <toolchain>
+        <type>jdk</type>
+        <provides>
+          <version>1.9</version>
+          <vendor>oracle</vendor>
+        </provides>
+        <configuration>
+          <jdkHome>/path/to/java-9/home</jdkHome>
+        </configuration>
+      </toolchain>
+    </toolchains>
+
 ## Running from IntelliJ
 
 Java9's JPMS do not work on IntelliJ 2017.2.*
 
 You need IntelliJ with version 2017.3 or later.
+
+You may need to explicitly change the module SDKs to Java9.
